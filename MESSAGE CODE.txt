@@ -1,0 +1,13 @@
+client.on("messageCreate", (message) => {
+    const prefix = "?"
+    if (!message.content.startsWith(prefix)) return;
+    
+    const messageArray = message.content.split(" ");
+    const cmd = messageArray[0]
+    const args = messageArray.slice(1);
+
+
+    if (message.content.toLowerCase() === `${prefix}hello`) {
+        message.channel.send("hey there")
+    }
+})
